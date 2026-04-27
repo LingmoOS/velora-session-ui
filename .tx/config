@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[o:linuxdeepin:p:deepin-desktop-environment:r:25d4b0b8070360022607ef6938eef4cf]
+file_filter = translations/dde-session-ui_<lang>.ts
+source_file = translations/dde-session-ui.ts
+source_lang = en
+type = QT
+
