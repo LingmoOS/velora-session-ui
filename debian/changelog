@@ -1,3 +1,9 @@
+dde-session-ui (6.0.40.lingmo.1) unstable; urgency=medium
+
+  * new release for Lingmo OS.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 29 Apr 2026 17:05:00 +0800
+
 dde-session-ui (6.0.39) unstable; urgency=medium
 
   * fix(touchscreen-dialog): fix crash when monitor list changes

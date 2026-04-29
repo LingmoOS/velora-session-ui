@@ -1,7 +1,7 @@
-Source: dde-session-ui
+Source: velora-session-ui
 Section: devel
 Priority: optional
-Maintainer: Deepin Sysdev <sysdev@deepin.com>
+Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends: debhelper (>= 8.0.0), pkg-config,
  cmake,
  qt6-base-dev,
@@ -19,8 +19,8 @@ Build-Depends: debhelper (>= 8.0.0), pkg-config,
  libgio-qt-dev,
  libxext-dev,
  systemd-dev
-Standards-Version: 3.9.4
-Homepage: http://www.deepin.org/
+Standards-Version: 4.5.0
+Homepage: https://github.com/LingmoOS/velora-session-ui
 
 Package: dde-session-ui
 Architecture: any
