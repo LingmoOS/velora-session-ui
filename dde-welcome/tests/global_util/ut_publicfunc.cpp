@@ -24,7 +24,7 @@ public:
 
 TEST_F(UtPublicFunc, coverageTest)
 {
-    QString bgPath = "/usr/share/wallpapers/deepin/desktop.jpg";
+    QString bgPath = "/usr/share/wallpapers/lingmo/default.jpg";
     if (!QFile::exists(bgPath)) {
         bgPath = "/usr/share/backgrounds/default_background.jpg";
     }

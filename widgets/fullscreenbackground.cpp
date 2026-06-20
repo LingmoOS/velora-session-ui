@@ -58,7 +58,7 @@ void FullscreenBackground::updateBackground(const QString &file)
         m_bgPath = file;
     }
     else {
-        m_bgPath = "/usr/share/wallpapers/deepin/desktop.jpg";
+        m_bgPath = "/usr/share/wallpapers/lingmo/default.jpg";
         if (!QFile::exists(m_bgPath)) {
             m_bgPath = "/usr/share/backgrounds/default_background.jpg";
         }

@@ -4,7 +4,7 @@ Release:        1
 Summary:        Deepin desktop-environment - Session UI module
 License:        GPLv3
 URL:            https://github.com/linuxdeepin/%{name}
-Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        dde-session-ui-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
