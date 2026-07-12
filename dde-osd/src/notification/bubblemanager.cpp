@@ -1,4 +1,4 @@
-﻿// SPDX-FileCopyrightText: 2014 - 2022 UnionTech Software Technology Co., Ltd.
+// SPDX-FileCopyrightText: 2014 - 2022 UnionTech Software Technology Co., Ltd.
 //
 // SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -32,8 +32,8 @@
 
 Q_LOGGING_CATEGORY(notifiyBubbleLog, "dde.notifycation.bubblemanger")
 
-using DisplayInter = org::deepin::dde::Display1;
-using MonitorInter = org::deepin::dde::display1::Monitor;
+using DisplayInter = org::lingmo::Display1;
+using MonitorInter = org::lingmo::display1::Monitor;
 
 BubbleManager::BubbleManager(AbstractPersistence *persistence, AbstractNotifySetting *setting, QObject *parent)
     : QObject(parent)
@@ -57,10 +57,10 @@ BubbleManager::BubbleManager(AbstractPersistence *persistence, AbstractNotifySet
                                            QDBusConnection::sessionBus(), this);
         m_soundeffectInter = new SoundeffectInter(SoundEffectDaemonDBusServie, SoundEffectDaemonDBusPath,
                                                    QDBusConnection::sessionBus(), this);
-        m_appearance = new Appearance("org.deepin.dde.Appearance1", "/org/deepin/dde/Appearance1", QDBusConnection::sessionBus(), this);
+        m_appearance = new Appearance("org.lingmo.Appearance1", "/org/lingmo/Appearance1", QDBusConnection::sessionBus(), this);
         m_dockInter = new DBusDockInterface(this);
-        m_gestureInter = new GestureInter("org.deepin.dde.Gesture1"
-                                          , "/org/deepin/dde/Gesture1"
+        m_gestureInter = new GestureInter("org.lingmo.dde.Gesture1"
+                                          , "/org/lingmo/dde/Gesture1"
                                           , QDBusConnection::systemBus()
                                           , this);
     }
@@ -158,11 +158,11 @@ DCORE_USE_NAMESPACE
         appId = appName;
 
     if (calledFromDBus()) {
-        QGSettings oem_setting("com.deepin.dde.notifications", "/com/deepin/dde/notifications/");
+        QGSettings oem_setting("com.lingmo.dde.notifications", "/com/lingmo/dde/notifications/");
         if (oem_setting.keys().contains("notifycationClosed") && oem_setting.get("notifycationClosed").toBool())
             return 0;
 
-        QGSettings setting("com.deepin.dde.osd", "/com/deepin/dde/osd/");
+        QGSettings setting("com.lingmo.dde.osd", "/com/lingmo/dde/osd/");
         if (setting.keys().contains("bubbleDebugPrivacy") && setting.get("bubble-debug-privacy").toBool()) {
             qDebug() << "Notify:" << "appName:" + appName << "replaceID:" + QString::number(replacesId)
                      << "appIcon:" + appIcon << "summary:" + summary << "body:" + body
@@ -190,7 +190,7 @@ DCORE_USE_NAMESPACE
     if (useBuiltinBubble()) {
         // 如果display服务无效，无法获取显示器大小，不能正确计算显示位置，则不显示消息通知
         if (!m_displayInter->isValid()) {
-            qWarning() << "The name org.deepin.dde.Display1 is invalid";
+            qWarning() << "The name org.lingmo.dde.Display1 is invalid";
             return 0;
         }
     }
@@ -236,8 +236,8 @@ DCORE_USE_NAMESPACE
         QString action;
         //接收蓝牙文件时，只在发送完成后才有提示音,"cancel"表示正在发送文件
         if (actions.contains("cancel")) {
-            if (hints.contains("x-deepin-action-_view")) {
-                action = hints["x-deepin-action-_view"].toString();
+            if (hints.contains("x-lingmo-action-_view")) {
+                action = hints["x-lingmo-action-_view"].toString();
                 if (action.contains("xdg-open"))
                     DDesktopServices::playSystemSoundEffect(DDesktopServices::SSE_Notifications);
             }
@@ -542,7 +542,7 @@ QRect BubbleManager::calcDisplayRect()
 
     QRect dockRect(m_dockInter->geometry());
     for (const auto &screen : screenList) {
-        MonitorInter monitor("org.deepin.dde.Display1", screen.path(), QDBusConnection::sessionBus());
+        MonitorInter monitor("org.lingmo.Display1", screen.path(), QDBusConnection::sessionBus());
         QRect monitorRect(monitor.x(), monitor.y(), monitor.width(), monitor.height());
         if (monitor.enabled() && monitorRect.contains(dockRect.center())) {
             displayRect = QRect(monitorRect.x(), monitorRect.y(),

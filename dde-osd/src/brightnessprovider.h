@@ -32,7 +32,7 @@ private:
     QString pixmapName() const;
 
 private:
-    org::deepin::dde::Display1 *m_displayInter;
+    org::lingmo::Display1 *m_displayInter;
 };
 
 #endif // BRIGHTNESSPROVIDER_H

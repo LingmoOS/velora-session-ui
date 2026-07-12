@@ -227,8 +227,8 @@ void KBLayoutIndicator::handleActionTriggered(QAction *action)
 {
     if (action == m_addLayoutAction) {
         DDBusSender()
-                .service("org.deepin.dde.ControlCenter1")
-                .interface("org.deepin.dde.ControlCenter1")
+                .service("org.lingmo.ControlCenter1")
+                .interface("org.lingmo.ControlCenter1")
                 .path("/org/deepin/dde/ControlCenter1")
                 .method(QString("ShowModule"))
                 .arg(QString("keyboard"))

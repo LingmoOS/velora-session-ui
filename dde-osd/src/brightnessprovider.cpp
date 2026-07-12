@@ -10,8 +10,8 @@ DGUI_USE_NAMESPACE
 
 BrightnessProvider::BrightnessProvider(QObject *parent)
     : AbstractOSDProvider(parent),
-      m_displayInter(new org::deepin::dde::Display1("org.deepin.dde.Display1",
-                                                      "/org/deepin/dde/Display1",
+      m_displayInter(new org::lingmo::Display1("org.lingmo.dde.Display1",
+                                                      "/org/lingmo/dde/Display1",
                                                       QDBusConnection::sessionBus(), this))
 {
     m_suitableParams << "BrightnessUp" << "BrightnessDown" << "BrightnessUpAsh" << "BrightnessDownAsh";

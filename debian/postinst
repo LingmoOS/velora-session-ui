@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dialog_file="/usr/lib/dde-control-center/reset-password-dialog"
+dialog_file="/usr/lib/lingmo-control-center/reset-password-dialog"
 
 #判断文件是否存在
 if [ -f "$dialog_file" ]; then

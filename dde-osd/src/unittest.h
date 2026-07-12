@@ -10,7 +10,7 @@
 
 #include <QtTest>
 
-using NotifyInter = org::deepin::dde::Notification1;
+using NotifyInter = org::lingmo::Notification1;
 
 class UnitTest : public QObject
 {

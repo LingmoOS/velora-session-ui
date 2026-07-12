@@ -37,7 +37,7 @@ Window::Window(QWidget *parent)
     setupSize();
     setStyleSheet("Window { background: black }");
 
-    QDBusConnection::sessionBus().connect("org.deepin.dde.LockFront1",
+    QDBusConnection::sessionBus().connect("org.lingmo.LockFront1",
                                               "/org/deepin/dde/LockFront1",
                                               "org.deepin.dde.LockFront1",
                                               "Visible",
@@ -74,7 +74,7 @@ void Window::setupSize()
     m_text->setAlignment(Qt::AlignHCenter);
     m_text->move(0, m_image->y() + m_pix.height());
 
-    QDBusInterface inter2Power("org.deepin.dde.Power1",
+    QDBusInterface inter2Power("org.lingmo.Power1",
                                "/org/deepin/dde/Power1",
                                "org.deepin.dde.Power1",
                                QDBusConnection::sessionBus(), this);

@@ -13,7 +13,7 @@
 #include <QPen>
 
 DWIDGET_USE_NAMESPACE
-using namespace org::deepin::dde::display1;
+using namespace org::lingmo::display1;
 
 class RecognizeDialog : public DBlurEffectWidget
 {

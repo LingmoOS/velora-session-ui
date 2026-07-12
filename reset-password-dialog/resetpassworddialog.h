@@ -69,8 +69,8 @@ private:
     SecurityQuestionsWidget *m_SecurityQuestionsWidget;
     bool m_isSecurityQuestionsExist;
     QRect m_screenGeometry;
-    org::deepin::dde::Accounts1 *m_accountInter;
-    org::deepin::dde::accounts1::User *m_userInter;
+    org::lingmo::Accounts1 *m_accountInter;
+    org::lingmo::accounts1::User *m_userInter;
     QFile filein;
     QString m_userPath;
     QString m_userName;

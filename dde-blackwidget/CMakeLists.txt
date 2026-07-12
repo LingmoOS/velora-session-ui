@@ -32,5 +32,5 @@ target_link_libraries(${Blackwidget_Name} PRIVATE
 ## bin
 install(TARGETS ${Blackwidget_Name} DESTINATION lib/deepin-daemon)
 ## service
-install(FILES misc/dbus-services/org.deepin.dde.BlackScreen1.service DESTINATION share/dbus-1/services)
+install(FILES misc/dbus-services/org.lingmo.BlackScreen1.service DESTINATION share/dbus-1/services)
 install(FILES misc/systemd/user/dde-blackwidget.service DESTINATION ${SYSTEMD_USER_UNIT_DIR})

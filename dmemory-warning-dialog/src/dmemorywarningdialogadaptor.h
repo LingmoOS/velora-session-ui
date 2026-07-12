@@ -12,7 +12,7 @@
 class DMemoryWarningDialogAdaptor : public QDBusAbstractAdaptor
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.deepin.dde.MemoryWarningDialog1")
+    Q_CLASSINFO("D-Bus Interface", "org.lingmo.MemoryWarningDialog1")
 
 public:
     explicit DMemoryWarningDialogAdaptor(DMemoryWarningDialog *dialog);

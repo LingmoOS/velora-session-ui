@@ -24,29 +24,29 @@
 #include "bubble.h"
 #include "constants.h"
 
-using Appearance = org::deepin::dde::Appearance1;
-using UserInter = org::deepin::dde::SessionManager1;
-using SoundeffectInter = org::deepin::dde::SoundEffect1;
-using GestureInter = org::deepin::dde::Gesture1;
-using DisplayInter = org::deepin::dde::Display1;
-using DockInter = org::deepin::dde::daemon::Dock1;
+using Appearance = org::lingmo::Appearance1;
+using UserInter = org::lingmo::SessionManager1;
+using SoundeffectInter = org::lingmo::SoundEffect1;
+using GestureInter = org::lingmo::Gesture1;
+using DisplayInter = org::lingmo::Display1;
+using DockInter = org::lingmo::daemon::Dock1;
 
 static const QString NotificationsDBusService = "org.freedesktop.Notifications";
 static const QString NotificationsDBusPath = "/org/freedesktop/Notifications";
-static const QString DDENotifyDBusServer = "org.deepin.dde.Notification1";
-static const QString DDENotifyDBusPath = "/org/deepin/dde/Notification1";
+static const QString DDENotifyDBusServer = "org.lingmo.dde.Notification1";
+static const QString DDENotifyDBusPath = "/org/lingmo/dde/Notification1";
 static const QString Login1DBusService = "org.freedesktop.login1";
 static const QString Login1DBusPath = "/org/freedesktop/login1";
-static const QString DockDaemonDBusServie = "org.deepin.dde.daemon.Dock1";
-static const QString DockDaemonDBusPath = "/org/deepin/dde/daemon/Dock1";
-static const QString DisplayDaemonDBusServie = "org.deepin.dde.Display1";
-static const QString DisplayDaemonDBusPath = "/org/deepin/dde/Display1";
-static const QString LauncherDaemonDBusServie = "org.deepin.dde.daemon.Launcher1";
-static const QString LauncherDaemonDBusPath = "/org/deepin/dde/daemon/Launcher1";
-static const QString SoundEffectDaemonDBusServie = "org.deepin.dde.SoundEffect1";
-static const QString SoundEffectDaemonDBusPath = "/org/deepin/dde/SoundEffect1";
-static const QString SessionDBusServie = "org.deepin.dde.SessionManager1";
-static const QString SessionDaemonDBusPath = "/org/deepin/dde/SessionManager1";
+static const QString DockDaemonDBusServie = "org.lingmo.dde.daemon.Dock1";
+static const QString DockDaemonDBusPath = "/org/lingmo/dde/daemon/Dock1";
+static const QString DisplayDaemonDBusServie = "org.lingmo.dde.Display1";
+static const QString DisplayDaemonDBusPath = "/org/lingmo/dde/Display1";
+static const QString LauncherDaemonDBusServie = "org.lingmo.dde.daemon.Launcher1";
+static const QString LauncherDaemonDBusPath = "/org/lingmo/dde/daemon/Launcher1";
+static const QString SoundEffectDaemonDBusServie = "org.lingmo.dde.SoundEffect1";
+static const QString SoundEffectDaemonDBusPath = "/org/lingmo/dde/SoundEffect1";
+static const QString SessionDBusServie = "org.lingmo.dde.SessionManager1";
+static const QString SessionDaemonDBusPath = "/org/lingmo/dde/SessionManager1";
 
 class DBusControlCenter;
 class Login1ManagerInterface;

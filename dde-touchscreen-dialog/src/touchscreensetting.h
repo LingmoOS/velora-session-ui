@@ -13,8 +13,8 @@
 
 DWIDGET_USE_NAMESPACE
 
-using namespace org::deepin::dde;
-using namespace org::deepin::dde::display1;
+using namespace org::lingmo::dde;
+using namespace org::lingmo::display1;
 
 class RecognizeDialog;
 class MonitorIndicator;

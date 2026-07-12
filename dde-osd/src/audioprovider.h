@@ -10,7 +10,7 @@
 #include "org_deepin_dde_audio1.h"
 #include "org_deepin_dde_audio1_sink.h"
 
-using org::deepin::dde::Audio1;
+using org::lingmo::Audio1;
 
 /*!
  * \~chinese \class AudioProvider
@@ -32,7 +32,7 @@ public:
 
 private:
     Audio1 *m_audioInter;
-    org::deepin::dde::audio1::Sink *m_sinkInter;
+    org::lingmo::audio1::Sink *m_sinkInter;
 
     QString pixmapName() const;
     void drawScale(QPainter *painter, const QStyleOptionViewItem &option, const QColor &color) const;

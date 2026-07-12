@@ -16,7 +16,7 @@
 #include "org_deepin_dde_display1.h"
 
 DWIDGET_USE_NAMESPACE
-using namespace org::deepin::dde;
+using namespace org::lingmo::dde;
 
 int main(int argc, char *argv[])
 {
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    Display1 display("org.deepin.dde.Display1", "/org/deepin/dde/Display1", QDBusConnection::sessionBus());
+    Display1 display("org.lingmo.Display1", "/org/lingmo/Display1", QDBusConnection::sessionBus());
     // 只有一块屏幕时不显示触摸选择提示框
     if (display.monitors().size() < 2) {
         return -1;

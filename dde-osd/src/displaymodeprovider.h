@@ -12,7 +12,7 @@
 #include "org_deepin_dde_display1.h"
 #include "org_deepin_dde_appearance1.h"
 
-using namespace org::deepin::dde;
+using namespace org::lingmo::dde;
 DCORE_USE_NAMESPACE
 
 /*!

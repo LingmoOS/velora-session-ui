@@ -41,7 +41,7 @@ int start()
         return checkPasswordExpired();
     }
 
-    QDBusInterface userInter("org.deepin.dde.Accounts1", QString("/org/deepin/dde/Accounts1/User%1").arg(getuid()), "org.deepin.dde.Accounts1.User", QDBusConnection::systemBus());
+    QDBusInterface userInter("org.lingmo.Accounts1", QString("/org/lingmo/Accounts1/User%1").arg(getuid()), "org.lingmo.Accounts1.User", QDBusConnection::systemBus());
     QDBusPendingReply<LoginReminderInfo> reply = userInter.call("GetReminderInfo");
     if (reply.isError()) {
         qWarning() << "failed to retrieve login reminder info, error: " << reply.error().message();
@@ -137,7 +137,7 @@ int checkPasswordExpired() {
     qDebug() << "check password expired";
     
     // 调用 PasswordExpiredInfo 获取密码过期信息
-    QDBusInterface userInter("org.deepin.dde.Accounts1", 
+    QDBusInterface userInter("org.lingmo.Accounts1",
                              QString("/org/deepin/dde/Accounts1/User%1").arg(getuid()), 
                              "org.deepin.dde.Accounts1.User", 
                              QDBusConnection::systemBus());
@@ -195,7 +195,7 @@ int checkPasswordExpired() {
     QVariantMap hints;
     // 点击通知后打开控制中心的账户密码修改页面
     hints.insert(QString("x-deepin-action-change_password"), 
-                 QVariant(QString("dbus-send,--print-reply,--dest=org.deepin.dde.ControlCenter1,/org/deepin/dde/ControlCenter1,org.deepin.dde.ControlCenter1.ShowPage,string:accountsloginMethodItempassword")));
+                 QVariant(QString("dbus-send,--print-reply,--dest=org.lingmo.ControlCenter1,/org/lingmo/ControlCenter1,org.lingmo.ControlCenter1.ShowPage,string:accountsloginMethodItempassword")));
     
     QDBusPendingReply<uint> notifyIdReply = notifyInter->call("Notify", 
                                                                 "dde-control-center", 
@@ -260,7 +260,7 @@ int main(int argc, char *argv[])
 
     // 检查 org.deepin.dde.Notification1 服务是否已启动
     QDBusConnectionInterface *interface = QDBusConnection::sessionBus().interface();
-    if (interface->isServiceRegistered("org.deepin.dde.Notification1")) {
+    if (interface->isServiceRegistered("org.lingmo.Notification1")) {
         // 服务已启动，直接执行
         qDebug() << "Notification service already available, starting immediately";
         int result = start();

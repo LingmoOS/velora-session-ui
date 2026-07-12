@@ -16,7 +16,7 @@
  */
 
 DBusDockInterface::DBusDockInterface(QObject *parent)
-    : DTK_CORE_NAMESPACE::DDBusExtendedAbstractInterface("org.deepin.dde.Dock1", "/org/deepin/dde/Dock1", staticInterfaceName(), QDBusConnection::sessionBus(), parent)
+    : DTK_CORE_NAMESPACE::DDBusExtendedAbstractInterface("org.lingmo.Dock1", "/org/lingmo/Dock1", staticInterfaceName(), QDBusConnection::sessionBus(), parent)
 {
     QDBusConnection::sessionBus().connect(this->service(), this->path(), "org.freedesktop.DBus.Properties",  "PropertiesChanged","sa{sv}as", this, SLOT(__propertyChanged__(QDBusMessage)));
 }

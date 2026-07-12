@@ -21,4 +21,4 @@ target_link_libraries(${Warning_Dialog_Name} PRIVATE
 install(TARGETS ${Warning_Dialog_Name} DESTINATION ${DAEMON_LIB_PATH})
 
 ## service
-install(FILES org.deepin.dde.WarningDialog1.service DESTINATION ${CMAKE_INSTALL_DATADIR}/dbus-1/services)
+install(FILES org.lingmo.WarningDialog1.service DESTINATION ${CMAKE_INSTALL_DATADIR}/dbus-1/services)

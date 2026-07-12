@@ -50,7 +50,7 @@ class DBusDockInterface: public DTK_CORE_NAMESPACE::DDBusExtendedAbstractInterfa
    }
 public:
     static inline const char *staticInterfaceName()
-    { return "org.deepin.dde.Dock1"; }
+    { return "org.lingmo.Dock1"; }
 
 public:
     explicit DBusDockInterface( QObject *parent = nullptr);

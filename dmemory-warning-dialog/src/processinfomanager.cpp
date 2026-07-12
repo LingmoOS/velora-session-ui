@@ -107,8 +107,8 @@ unsigned totalMemoryBytes(const QList<QByteArray> &processList)
 ProcessInfoManager::ProcessInfoManager(QObject *parent)
     : QObject(parent)
     , m_refreshTimer(new QTimer(this))
-    , m_startManagerInter(new StartManagerInter("org.deepin.dde.StartManager1", "/org/deepin/dde/StartManager1", QDBusConnection::sessionBus(), this))
-    , m_chromeTabsInter(new ChromeTabsInter("com.deepin.chromeExtension.TabsLimit", "/com/deepin/chromeExtension/TabsLimit", QDBusConnection::sessionBus(), this))
+    , m_startManagerInter(new StartManagerInter("org.lingmo.StartManager1", "/org/lingmo/StartManager1", QDBusConnection::sessionBus(), this))
+    , m_chromeTabsInter(new ChromeTabsInter("com.lingmo.chromeExtension.TabsLimit", "/com/lingmo/chromeExtension/TabsLimit", QDBusConnection::sessionBus(), this))
 {
     m_refreshTimer->setSingleShot(false);
     m_refreshTimer->setInterval(1000);

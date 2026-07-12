@@ -8,8 +8,8 @@
 
 ResetPasswordWorker::ResetPasswordWorker(const QString& userName, QObject *parent)
     : QObject (parent)
-    , m_accountInter(new Accounts("org.deepin.dde.Accounts1", "/org/deepin/dde/Accounts1", QDBusConnection::systemBus(), this))
-    , m_syncHelperInter(new QDBusInterface("com.deepin.sync.Helper", "/com/deepin/sync/Helper", "com.deepin.sync.Helper", QDBusConnection::systemBus(), this))
+    , m_accountInter(new Accounts("org.lingmo.Accounts1", "/org/lingmo/Accounts1", QDBusConnection::systemBus(), this))
+    , m_syncHelperInter(new QDBusInterface("com.lingmo.sync.Helper", "/com/lingmo/sync/Helper", "com.lingmo.sync.Helper", QDBusConnection::systemBus(), this))
 {
     qRegisterMetaType<SecurityQuestionAnswers>("SecurityQuestionAnswers");
     qDBusRegisterMetaType<SecurityQuestionAnswers>();
@@ -19,8 +19,8 @@ ResetPasswordWorker::ResetPasswordWorker(const QString& userName, QObject *paren
     if (reply.isError()) {
         qWarning() << QString("get user failed:") << reply.error();
     } else {
-        m_userInter = new AccountsUser("org.deepin.dde.Accounts1", reply.value(), QDBusConnection::systemBus(), this);
-        m_userQInter = new QDBusInterface("org.deepin.dde.Accounts1", reply.value(),"org.deepin.dde.Accounts1.User", QDBusConnection::systemBus(), this);
+        m_userInter = new AccountsUser("org.lingmo.Accounts1", reply.value(), QDBusConnection::systemBus(), this);
+        m_userQInter = new QDBusInterface("org.lingmo.Accounts1", reply.value(),"org.lingmo.Accounts1.User", QDBusConnection::systemBus(), this);
     }
     m_userPath = reply.value();
 }
@@ -98,7 +98,7 @@ int ResetPasswordWorker::bindCheck()
         return -1;
     }
 
-    QDBusInterface userInter("org.deepin.dde.Accounts1",
+    QDBusInterface userInter("org.lingmo.Accounts1",
                              m_userPath,
                              "org.deepin.dde.Accounts1.User",
                              QDBusConnection::systemBus());

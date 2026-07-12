@@ -1,4 +1,4 @@
 [D-BUS Service]
-Name=org.deepin.dde.BlackScreen1
+Name=org.lingmo.BlackScreen1
 Exec=/bin/false
 SystemdService=dde-blackwidget.service

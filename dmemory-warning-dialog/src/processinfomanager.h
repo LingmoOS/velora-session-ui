@@ -15,8 +15,8 @@
 
 QString genericAppName(const QString &desktop);
 
-using StartManagerInter = org::deepin::dde::StartManager1;
-using ChromeTabsInter = com::deepin::chromeextension::TabsLimit;
+using StartManagerInter = org::lingmo::StartManager1;
+using ChromeTabsInter = com::lingmo::chromeextension::TabsLimit;
 
 class ProcessInfo
 {

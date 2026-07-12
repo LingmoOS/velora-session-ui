@@ -12,7 +12,7 @@
 #include "org_deepin_dde_display1.h"
 #include "org_deepin_dde_display1_monitor.h"
 
-using MonitorInter = org::deepin::dde::display1::Monitor;
+using MonitorInter = org::lingmo::display1::Monitor;
 
 SuspendDialog::SuspendDialog(QRect screenGeometry)
     : DDialog(tr("External monitor detected, suspend?"), tr("%1s").arg(15)),
@@ -67,10 +67,10 @@ Manager::Manager()
 
 void Manager::setupDialogs()
 {
-    org::deepin::dde::Display1 *displayInter = new org::deepin::dde::Display1("org.deepin.dde.Display1", "/org/deepin/dde/Display1", QDBusConnection::sessionBus(), this);
+    org::lingmo::Display1 *displayInter = new org::lingmo::Display1("org.lingmo.Display1", "/org/lingmo/Display1", QDBusConnection::sessionBus(), this);
     QList<QDBusObjectPath> screenList = displayInter->monitors();
     for (int i = 0; i < screenList.length(); i++) {
-        MonitorInter *monitor = new MonitorInter("org.deepin.dde.Display1", screenList[i].path(), QDBusConnection::sessionBus());
+        MonitorInter *monitor = new MonitorInter("org.lingmo.Display1", screenList[i].path(), QDBusConnection::sessionBus());
         if (monitor->name().toLower().contains("edp"))
             continue;
 

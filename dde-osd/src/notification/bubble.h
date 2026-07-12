@@ -14,7 +14,7 @@
 
 #include "constants.h"
 
-using UserInter = org::deepin::dde::SessionManager1;
+using UserInter = org::lingmo::SessionManager1;
 
 DWIDGET_USE_NAMESPACE
 

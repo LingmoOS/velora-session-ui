@@ -74,11 +74,11 @@ int main(int argc, char *argv[])
     Manager m;
     QDBusConnection connection = QDBusConnection::sessionBus();
 
-    connection.interface()->registerService("org.deepin.dde.Osd1",
+    connection.interface()->registerService("org.lingmo.Osd1",
                                             QDBusConnectionInterface::ReplaceExistingService,
                                             QDBusConnectionInterface::AllowReplacement);
 
-    connection.registerObject("/", "org.deepin.dde.Osd1", &m, QDBusConnection::ExportAllSlots);
+    connection.registerObject("/", "org.lingmo.Osd1", &m, QDBusConnection::ExportAllSlots);
 
     QObject::connect(connection.interface(), &QDBusConnectionInterface::serviceUnregistered, qApp, &QApplication::quit);
 

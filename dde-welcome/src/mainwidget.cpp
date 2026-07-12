@@ -20,30 +20,30 @@
 #include <QProcess>
 #endif
 
-using ImageBlur = org::deepin::dde::ImageBlur1;
+using ImageBlur = org::lingmo::ImageBlur1;
 
 MainWidget::MainWidget(QWidget *parent)
     : FullscreenBackground(parent)
 {
-    auto blurImageInter = new ImageBlur("org.deepin.dde.ImageBlur1",
-                                        "/org/deepin/dde/ImageBlur1",
+    auto blurImageInter = new ImageBlur("org.lingmo.dde.ImageBlur1",
+                                        "/org/lingmo/dde/ImageBlur1",
                                         QDBusConnection::systemBus(), this);
     setAccessibleName("MainWidget");
     connect(blurImageInter, &ImageBlur::BlurDone, this, &MainWidget::onBlurWallpaperFinished);
     connect(qApp, &QApplication::aboutToQuit, this, [=] {
         DDBusSender()
-            .service("org.deepin.dde.Zone1")
-            .interface("org.deepin.dde.Zone1")
-            .path("/org/deepin/dde/Zone1")
+            .service("org.lingmo.Zone1")
+            .interface("org.lingmo.Zone1")
+            .path("/org/lingmo/dde/Zone1")
             .method("EnableZoneDetected")
             .arg(true)
             .call();
 
     });
 
-    auto dConfig = Dtk::Core::DConfig::create("org.deepin.dde.appearance", "org.deepin.dde.appearance", QString(), this);
+    auto dConfig = Dtk::Core::DConfig::create("org.lingmo.dde.appearance", "org.lingmo.dde.appearance", QString(), this);
     if (!dConfig) {
-        qWarning() << "Failed to create org.deepin.dde.appearance DConfig";
+        qWarning() << "Failed to create org.lingmo.dde.appearance DConfig";
         return;
     }
 
@@ -64,9 +64,9 @@ MainWidget::MainWidget(QWidget *parent)
     updateBackground(w.isEmpty() ? m_wallpaper : w);
 
     DDBusSender()
-        .service("org.deepin.dde.Zone1")
-        .interface("org.deepin.dde.Zone1")
-        .path("/org/deepin/dde/Zone1")
+        .service("org.lingmo.Zone1")
+        .interface("org.lingmo.Zone1")
+        .path("/org/lingmo/dde/Zone1")
         .method("EnableZoneDetected")
         .arg(false)
         .call();

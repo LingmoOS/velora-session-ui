@@ -77,7 +77,7 @@ void UnitTest::test_NotifyInter()
     argList << "WLANOn" << "WLANOff";
 
     foreach(QString arg , argList) {
-        DDBusSender().service("org.deepin.dde.Osd1").interface("org.deepin.dde.Osd1").path("/")
+        DDBusSender().service("org.lingmo.Osd1").interface("org.lingmo.Osd1").path("/")
                      .method(QString("ShowOSD")).arg(arg).call();
         QThread::msleep(500);
     }

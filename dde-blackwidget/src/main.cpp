@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
     BlackWidgetAdaptor adaptor(&w);
 
     if (result) {
-        qInfo() << "Session register object : " << sessionDBus.registerObject("/org/deepin/dde/BlackScreen1", &w);
+        qInfo() << "Session register object : " << sessionDBus.registerObject("/org/lingmo/BlackScreen1", &w);
         QObject::connect(sessionDBus.interface(), &QDBusConnectionInterface::serviceUnregistered, &w, &Window::onNameLost);
     } else {
         qInfo() << "End black widget.";

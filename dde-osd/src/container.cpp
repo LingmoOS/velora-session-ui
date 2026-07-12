@@ -16,8 +16,8 @@
 #include "org_deepin_dde_display1_monitor.h"
 #include "notification/dbusdockinterface.h"
 
-using DisplayInter = org::deepin::dde::Display1;
-using MonitorInter = org::deepin::dde::display1::Monitor;
+using DisplayInter = org::lingmo::Display1;
+using MonitorInter = org::lingmo::display1::Monitor;
 
 DGUI_USE_NAMESPACE
 
@@ -70,11 +70,11 @@ void Container::moveToCenter()
 {
     QRect displayRect;
     qreal ratio = qApp->primaryScreen()->devicePixelRatio();
-    DisplayInter displayInter("org.deepin.dde.Display1", "/org/deepin/dde/Display1", QDBusConnection::sessionBus());
+    DisplayInter displayInter("org.lingmo.Display1", "/org/lingmo/Display1", QDBusConnection::sessionBus());
     QList<QDBusObjectPath> screenList = displayInter.monitors();
 
     for (const auto &screen : screenList) {
-        MonitorInter monitor("org.deepin.dde.Display1", screen.path(), QDBusConnection::sessionBus());
+        MonitorInter monitor("org.lingmo.Display1", screen.path(), QDBusConnection::sessionBus());
         QRect monitorRect(monitor.x(), monitor.y(), monitor.width(), monitor.height());
         DBusDockInterface dockInter;
         if (monitor.enabled() && monitorRect.contains(dockInter.geometry())) {
@@ -118,7 +118,7 @@ void Container::updateWindowRadius(int radius)
 
 void Container::onDelayQuit()
 {
-    const QGSettings gsettings("com.deepin.dde.osd", "/com/deepin/dde/osd/");
+    const QGSettings gsettings("com.lingmo.dde.osd", "/com/lingmo/dde/osd/");
     if (gsettings.keys().contains("auto-exit") && gsettings.get("auto-exit").toBool()) {
         if (isVisible())
             return m_quitTimer->start();

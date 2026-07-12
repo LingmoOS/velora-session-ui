@@ -1,4 +1,4 @@
-Name:           dde-session-ui
+Name:           lingmo-session-ui
 Version:        5.4.8
 Release:        1
 Summary:        Deepin desktop-environment - Session UI module
@@ -8,7 +8,7 @@ Source0:        dde-session-ui-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
-BuildRequires:  deepin-gettext-tools
+BuildRequires:  lingmo-gettext-tools
 BuildRequires:  pkgconfig(dtkwidget) >= 5.1
 BuildRequires:  pkgconfig(dframeworkdbus)
 BuildRequires:  pkgconfig(gsettings-qt)
@@ -22,7 +22,7 @@ BuildRequires:  gocode
 BuildRequires:  qt5-devel
 BuildRequires:  dtkcore-devel >= 5.1
 BuildRequires:  dde-dock-devel
-Requires:       dde-daemon
+Requires:       lingmo-daemon
 Requires:       startdde
 
 Requires:       lightdm

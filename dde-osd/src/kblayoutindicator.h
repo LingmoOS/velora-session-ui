@@ -9,7 +9,7 @@
 #include <QMenu>
 
 #include "org_deepin_dde_inputdevice1_keyboard.h"
-using KeyboardInterface = org::deepin::dde::inputdevice1::Keyboard;
+using KeyboardInterface = org::lingmo::inputdevice1::Keyboard;
 /*!
  * \~chinese \class DataWrapper
  * \~chinese \brief 获取键盘布局的信息

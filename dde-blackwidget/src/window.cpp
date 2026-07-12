@@ -160,8 +160,8 @@ void BlackWidgetAdaptor::setActive(bool visible)
 void BlackWidgetAdaptor::quitDBusService()
 {
     qInfo() << "Quit DBus service";
-    QDBusConnection::sessionBus().unregisterObject("org.deepin.dde.BlackScreen1");
-    QDBusConnection::sessionBus().unregisterService("org.deepin.dde.BlackScreen1");
+    QDBusConnection::sessionBus().unregisterObject("org.lingmo.BlackScreen1");
+    QDBusConnection::sessionBus().unregisterService("org.lingmo.BlackScreen1");
 }
 
 bool BlackWidgetAdaptor::blackScreenVisible()

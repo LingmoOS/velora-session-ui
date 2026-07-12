@@ -49,7 +49,7 @@ bool confirm(const QPixmap &icon)
 DMemoryWarningDialog::DMemoryWarningDialog(QWidget *parent)
     : DAbstractDialog(parent)
     // TODO
-    , m_startManagerInter(new StartManagerInter("org.deepin.dde.StartManager1", "/org/deepin/dde/StartManager1", QDBusConnection::sessionBus(), this))
+    , m_startManagerInter(new StartManagerInter("org.lingmo.StartManager1", "/org/lingmo/StartManager1", QDBusConnection::sessionBus(), this))
     , m_infoModel(new ProcessInfoModel)
     , m_icon(new QLabel)
     , m_memNeeded(new QLabel)

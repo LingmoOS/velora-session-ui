@@ -22,91 +22,91 @@ qt_add_dbus_interface(
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Audio1.xml
+    ../../xml/org.lingmo.Audio1.xml
     org_deepin_dde_audio1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Audio1.Sink.xml
+    ../../xml/org.lingmo.Audio1.Sink.xml
     org_deepin_dde_audio1_sink
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Accounts1.xml
+    ../../xml/org.lingmo.Accounts1.xml
     org_deepin_dde_accounts1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Accounts1.User.xml
+    ../../xml/org.lingmo.Accounts1.User.xml
     org_deepin_dde_accounts1_user
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/com.deepin.chromeExtension.TabsLimit.xml
+    ../../xml/com.lingmo.chromeExtension.TabsLimit.xml
     com_deepin_chromeextension_tabslimit
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Display1.xml
+    ../../xml/org.lingmo.Display1.xml
     org_deepin_dde_display1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Display1.Monitor.xml
+    ../../xml/org.lingmo.Display1.Monitor.xml
     org_deepin_dde_display1_monitor
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Appearance1.xml
+    ../../xml/org.lingmo.Appearance1.xml
     org_deepin_dde_appearance1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Bluetooth1.xml
+    ../../xml/org.lingmo.Bluetooth1.xml
     org_deepin_dde_bluetooth1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.daemon.Dock1.xml
+    ../../xml/org.lingmo.daemon.Dock1.xml
     org_deepin_dde_daemon_dock1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.Gesture1.xml
+    ../../xml/org.lingmo.Gesture1.xml
     org_deepin_dde_gesture1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.ImageBlur1.xml
+    ../../xml/org.lingmo.ImageBlur1.xml
     org_deepin_dde_imageblur1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.InputDevice1.Keyboard.xml
+    ../../xml/org.lingmo.InputDevice1.Keyboard.xml
     org_deepin_dde_inputdevice1_keyboard
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.SessionManager1.xml
+    ../../xml/org.lingmo.SessionManager1.xml
     org_deepin_dde_sessionmanager1
 )
 
 dtk_add_dbus_interface(
     DBUS_SOURCE
-    ../../xml/org.deepin.dde.SoundEffect1.xml
+    ../../xml/org.lingmo.SoundEffect1.xml
     org_deepin_dde_soundeffect1
 )
 

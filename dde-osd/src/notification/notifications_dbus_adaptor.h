@@ -55,14 +55,14 @@ Q_SIGNALS:
 };
 
 /*
- * Adaptor class for interface org.deepin.dde.Notification1
+ * Adaptor class for interface org.lingmo.Notification1
  */
 class DDENotifyDBus: public QDBusAbstractAdaptor
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.deepin.dde.Notification1")
+    Q_CLASSINFO("D-Bus Interface", "org.lingmo.Notification1")
     Q_CLASSINFO("D-Bus Introspection", ""
-"  <interface name=\"org.deepin.dde.Notification1\">\n"
+"  <interface name=\"org.lingmo.Notification1\">\n"
 "    <method name=\"CloseNotification\">\n"
 "      <arg direction=\"in\" type=\"u\"/>\n"
 "    </method>\n"

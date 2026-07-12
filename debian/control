@@ -1,4 +1,4 @@
-Source: velora-session-ui
+Source: lingmo-session-ui
 Section: devel
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
@@ -15,28 +15,28 @@ Build-Depends: debhelper (>= 8.0.0), pkg-config,
  libsystemd-dev,
  libgtest-dev,
  libgmock-dev,
- libdeepin-pw-check-dev,
+ liblingmo-pw-check-dev,
  libgio-qt-dev,
  libxext-dev,
  systemd-dev
 Standards-Version: 4.5.0
-Homepage: https://github.com/LingmoOS/velora-session-ui
+Homepage: https://github.com/LingmoOS/lingmo-session-ui
 
-Package: dde-session-ui
+Package: lingmo-session-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${dist:Depends},
- velora-desktop-schemas (>= 5.9.14),
- dde-daemon (>=6.1.26),
+ lingmo-desktop-schemas (>= 5.9.14),
+ lingmo-daemon (>=6.1.26),
  x11-xserver-utils,
  dbus-user-session,
- dde-session-shell
+ lingmo-session-shell
 Provides: lightdm-greeter
 Recommends: onboard
 Conflicts: dde-workspace,
  startdde (<< 2.91.1),
- dde-control-center (<<6.0.0.1),
+ lingmo-control-center (<<6.0.0.1),
  deepin-notifications
 Replaces: deepin-notifications
-Breaks: dde-workspace, startdde(<< 2.91.1), dde-control-center (<<6.0.0.1)
-Description: deepin desktop-environment - dde-session-ui module
- Deepin desktop environment 2015 - dde-session-ui module.
+Breaks: dde-workspace, startdde(<< 2.91.1), lingmo-control-center (<<6.0.0.1)
+Description: deepin desktop-environment - lingmo-session-ui module
+ Deepin desktop environment 2015 - lingmo-session-ui module.

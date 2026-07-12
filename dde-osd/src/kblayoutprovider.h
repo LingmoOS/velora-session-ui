@@ -9,7 +9,7 @@
 
 #include "org_deepin_dde_inputdevice1_keyboard.h"
 
-using namespace org::deepin::dde::inputdevice1;
+using namespace org::lingmo::inputdevice1;
 
 /*!
  * \~chinese \class DisplayModeProvider

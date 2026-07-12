@@ -8,8 +8,8 @@
 #include "org_deepin_dde_accounts1_user.h"
 #include "org_deepin_dde_accounts1.h"
 
-using Accounts = org::deepin::dde::Accounts1;
-using AccountsUser = org::deepin::dde::accounts1::User;
+using Accounts = org::lingmo::Accounts1;
+using AccountsUser = org::lingmo::accounts1::User;
 
 typedef QMap<int, QString> SecurityQuestionAnswers;
 

@@ -271,7 +271,7 @@ void NotifyCenterWidget::hideAni()
 
 void NotifyCenterWidget::registerRegion()
 {
-    QDBusInterface interface("org.deepin.dde.XEventMonitor1", "/org/deepin/dde/XEventMonitor1",
+    QDBusInterface interface("org.lingmo.XEventMonitor1", "/org/lingmo/XEventMonitor1",
                              "org.deepin.dde.XEventMonitor1",
                              QDBusConnection::sessionBus());
     if (interface.isValid()) {

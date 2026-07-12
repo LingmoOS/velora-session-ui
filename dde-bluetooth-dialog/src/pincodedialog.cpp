@@ -11,14 +11,14 @@
 
 #include <DConfig>
 
-using  DBusBluetooth = org::deepin::dde::Bluetooth1;
+using  DBusBluetooth = org::lingmo::Bluetooth1;
 
 PinCodeDialog::PinCodeDialog(const QString &pinCode,  const QString &devicepath, const QString &starttime, const bool &cancelable) :
     DDialog(),
     m_pinCodeLabel(new LargeLabel(this)),
     m_titileLabel(new LargeLabel(this))
 {
-    auto bluetoothInter = new DBusBluetooth("org.deepin.dde.Bluetooth1", "/org/deepin/dde/Bluetooth1", QDBusConnection::sessionBus(), this);
+    auto bluetoothInter = new DBusBluetooth("org.lingmo.Bluetooth1", "/org/lingmo/Bluetooth1", QDBusConnection::sessionBus(), this);
 
     setAccessibleName("PinCodeDialog");
     QString titilestr = tr("The PIN for connecting to the Bluetooth device is:");

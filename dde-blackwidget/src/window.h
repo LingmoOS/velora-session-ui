@@ -40,7 +40,7 @@ private:
 
 class BlackWidgetAdaptor : public QDBusAbstractAdaptor {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.deepin.dde.BlackScreen1")
+    Q_CLASSINFO("D-Bus Interface", "org.lingmo.BlackScreen1")
 
 public:
     explicit BlackWidgetAdaptor(Window * parent);

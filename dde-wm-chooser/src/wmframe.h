@@ -11,7 +11,7 @@
 
 #include <QWidget>
 
-using ImageBlur = org::deepin::dde::ImageBlur1;
+using ImageBlur = org::lingmo::ImageBlur1;
 
 class WMFrame : public FullscreenBackground
 {
