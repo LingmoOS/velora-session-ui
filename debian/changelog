@@ -1,4 +1,4 @@
-velora-session-ui (6.0.42.lingmo.1) unstable; urgency=medium
+lingmo-session-ui (6.0.42.lingmo.1) unstable; urgency=medium
 
   * Lingmo namespace migration.
 
