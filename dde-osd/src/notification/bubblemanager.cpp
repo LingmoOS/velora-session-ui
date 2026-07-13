@@ -190,7 +190,7 @@ DCORE_USE_NAMESPACE
     if (useBuiltinBubble()) {
         // 如果display服务无效，无法获取显示器大小，不能正确计算显示位置，则不显示消息通知
         if (!m_displayInter->isValid()) {
-            qWarning() << "The name org.lingmo.dde.Display1 is invalid";
+            qWarning() << "The name org.lingmo.Display1 is invalid";
             return 0;
         }
     }

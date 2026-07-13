@@ -13,7 +13,7 @@
 
 DWIDGET_USE_NAMESPACE
 
-using namespace org::lingmo::dde;
+using namespace org::lingmo;
 using namespace org::lingmo::display1;
 
 class RecognizeDialog;

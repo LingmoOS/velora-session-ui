@@ -16,7 +16,7 @@
 #include "org_deepin_dde_display1.h"
 
 DWIDGET_USE_NAMESPACE
-using namespace org::lingmo::dde;
+using namespace org::lingmo;
 
 int main(int argc, char *argv[])
 {

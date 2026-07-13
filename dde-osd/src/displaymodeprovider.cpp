@@ -13,8 +13,8 @@
 
 DWIDGET_USE_NAMESPACE
 
-const QString DisplayDBusServer = "org.deepin.dde.Display1";
-const QString DisplayDBusPath = "/org/deepin/dde/Display1";
+const QString DisplayDBusServer = "org.lingmo.Display1";
+const QString DisplayDBusPath = "/org/lingmo/Display1";
 const QString AppIdAndName = "org.deepin.dde.control-center";
 const QString MultipleDisplayConfigKey = "display/mode";
 

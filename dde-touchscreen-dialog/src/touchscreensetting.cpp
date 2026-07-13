@@ -13,8 +13,8 @@
 
 DCORE_USE_NAMESPACE
 
-const QString DisplayServer = "org.deepin.dde.Display1";
-const QString DisplayServerPath = "/org/deepin/dde/Display1";
+const QString DisplayServer = "org.lingmo.Display1";
+const QString DisplayServerPath = "/org/lingmo/Display1";
 
 TouchscreenSetting::TouchscreenSetting(const QString &touchscreen, QWidget *parent)
     : DDialog(parent)
